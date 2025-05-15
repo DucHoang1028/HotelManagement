@@ -1,0 +1,14 @@
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\bin\Debug\net8.0\FUMiniHotel.DAO.deps.json
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\bin\Debug\net8.0\FUMiniHotel.DAO.runtimeconfig.json
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\bin\Debug\net8.0\FUMiniHotel.DAO.dll
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\bin\Debug\net8.0\FUMiniHotel.DAO.pdb
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.csproj.AssemblyReference.cache
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.dll
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\refint\FUMiniHotel.DAO.dll
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.pdb
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\FUMiniHotel.DAO.genruntimeconfig.cache
+C:\Users\ADMIN\source\repos\FUMiniHotel\FUMiniHotel.DAO\obj\Debug\net8.0\ref\FUMiniHotel.DAO.dll

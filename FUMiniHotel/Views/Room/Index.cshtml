@@ -1,0 +1,425 @@
+﻿@model List<FUMiniHotel.DAO.ViewModel.RoomInformationViewModel>
+
+@{
+    DateTime? checkIn = ViewBag.CheckIn as DateTime?;
+    DateTime? checkOut = ViewBag.CheckOut as DateTime?;
+    string searchAddress = ViewBag.SearchAddress as string;
+    int? roomTypeFilter = ViewBag.RoomTypeFilter as int?;
+    string searchHeadline = ViewBag.SearchHeadline as string;
+    int? numberOfCustomers = ViewBag.NumberOfCustomers as int?;
+    int? maxCapacityFilter = ViewBag.MaxCapacityFilter as int?;
+    int totalPages = ViewBag.TotalPages as int? ?? 0;
+    int currentPage = ViewBag.CurrentPage as int? ?? 1;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .pagination-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .pagination-container a {
+                color: #FEA116;
+                text-decoration: none;
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                margin: 0 5px;
+                display: inline-block;
+                transition: all 0.2s;
+            }
+
+                .pagination-container a:hover {
+                    background-color: #f8f9fa;
+                    color: #FEA116;
+                }
+
+                .pagination-container a.active {
+                    background-color: #FEA116;
+                    color: white;
+                    border-color: #FEA116;
+                }
+
+                .pagination-container a.arrow {
+                    font-size: 16px;
+                    padding: 8px 12px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    color: #FEA116;
+                }
+
+                    .pagination-container a.arrow:hover {
+                        background-color: #f8f9fa;
+                        color: #FEA116;
+                    }
+
+        /* Filter form styling */
+        .filter-form {
+            margin-bottom: 20px;
+        }
+
+            .filter-form .form-control,
+            .filter-form .form-select {
+                border-radius: 5px;
+            }
+
+            .filter-form .btn-primary {
+                background-color: #007bff;
+                border: none;
+            }
+
+                .filter-form .btn-primary:hover {
+                    background-color: #0056b3;
+                }
+
+        /* Quantity input styling */
+        .quantity-input {
+            width: 60px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Rooms</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item">
+                                <a asp-controller="Home" asp-action="Index" class="nav-item nav-link">Home</a>
+                            </li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Rooms</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        <!-- Booking Start -->
+        <div class="container-fluid booking pb-3 wow fadeIn"
+             data-wow-delay="0.1s"
+             style="position: sticky; top: 0; z-index: 999; background: white; width: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div class="container">
+                <div class="bg-white p-3">
+                    <form method="get">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-10">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <div class="date">
+                                            <input type="date" class="form-control" name="checkIn"
+                                                   value="@ViewBag.CheckIn?.ToString("yyyy-MM-dd")"
+                                                   required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="date">
+                                            <input type="date" class="form-control" name="checkOut"
+                                                   value="@ViewBag.CheckOut?.ToString("yyyy-MM-dd")"
+                                                   required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="number-of-customers">
+                                            <input type="number" class="form-control" name="numberOfCustomers"
+                                                   value="@numberOfCustomers"
+                                                   placeholder="Number of Customers" min="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Booking End -->
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="mt-2 text-danger text-center">
+                <strong>@ViewBag.ErrorMessage</strong>
+            </div>
+        }
+        @if (TempData["UnavailableRoomsMessage"] != null)
+        {
+            <div class="mt-2 text-warning text-center">
+                <strong>@TempData["UnavailableRoomsMessage"]</strong>
+            </div>
+        }
+        <!-- Room Start -->
+        @if (checkIn.HasValue && checkOut.HasValue)
+        {
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="section-title text-center text-primary text-uppercase">Our Rooms</h6>
+                        <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Rooms</span></h1>
+                    </div>
+
+                    <!-- Filter Form -->
+                    @if (string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                    {
+                        <div class="filter-form">
+                            <form method="get" class="row g-3">
+                                <input type="hidden" name="checkIn" value="@checkIn?.ToString("yyyy-MM-dd")" />
+                                <input type="hidden" name="checkOut" value="@checkOut?.ToString("yyyy-MM-dd")" />
+                                <input type="hidden" name="numberOfCustomers" value="@numberOfCustomers" />
+                                <div class="col-md-3">
+                                    <input type="text" name="searchHeadline" class="form-control" placeholder="Search by headline" value="@searchHeadline" />
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="roomTypeFilter" class="form-select">
+                                        <option value="">All Room Types</option>
+                                        @foreach (var roomType in ViewBag.RoomType as List<SelectListItem>)
+                                        {
+                                            if (roomTypeFilter.HasValue && roomTypeFilter.Value.ToString() == roomType.Value)
+                                            {
+                                                <option value="@roomType.Value" selected>@roomType.Text</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@roomType.Value">@roomType.Text</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select name="maxCapacityFilter" class="form-select">
+                                        <option value="">All Capacities</option>
+                                        @foreach (var capacity in ViewBag.MaxCapacities as List<SelectListItem>)
+                                        {
+                                            if (maxCapacityFilter.HasValue && maxCapacityFilter.Value.ToString() == capacity.Value)
+                                            {
+                                                <option value="@capacity.Value" selected>@capacity.Text</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@capacity.Value">@capacity.Text</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" name="searchAddress" class="form-control" placeholder="Search by address" value="@searchAddress" />
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary w-100">Filter</button>
+                                </div>
+                            </form>
+                        </div>
+                    }
+
+                    <div class="row g-4">
+                        @if (!Model.Any())
+                        {
+                            <div class="col-12 text-center">
+                                <h4 class="text-muted">No available rooms for the selected dates.</h4>
+                            </div>
+                        }
+                        else
+                        {
+                            @foreach (var roomViewModel in Model)
+                            {
+                                var item = roomViewModel.Room;
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="room-item shadow rounded overflow-hidden">
+                                        <div class="position-relative">
+                                            <img class="img-fluid" src="/Images/@item.RoomPicture" alt="Room Image">
+                                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">@item.RoomPricePerDay$/day</small>
+                                        </div>
+                                        <div class="p-4 mt-2">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h5 class="mb-0">@item.RoomHeadline</h5>
+                                                <div class="ps-2">
+                                                    <small class="fa fa-star text-primary"></small>
+                                                    <small class="fa fa-star text-primary"></small>
+                                                    <small class="fa fa-star text-primary"></small>
+                                                    <small class="fa fa-star text-primary"></small>
+                                                    <small class="fa fa-star text-primary"></small>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mb-3">
+                                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@item.NumOfBed Bed</small>
+                                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@item.NumOfBath Bath</small>
+                                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                            </div>
+                                            <p class="text-body mb-3">@item.RoomType.RoomTypeName</p>
+                                            <p class="text-body mb-3"><strong>Address:</strong> @(item.Address ?? "N/A")</p>
+                                            <p class="text-body mb-3"><strong>Max Capacity:</strong> @item.RoomMaxCapacity</p>
+                                            <p class="text-body mb-3"><strong>Available Rooms:</strong> @roomViewModel.RemainingAvailableRooms</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button type="button" class="btn btn-sm btn-primary rounded py-2 px-4" data-bs-toggle="modal" data-bs-target="#roomDetailModal-@item.RoomID">
+                                                    View Detail
+                                                </button>
+                                                <form method="post" asp-controller="Room" asp-action="BookNow" class="d-flex align-items-center">
+                                                    <input type="hidden" name="roomId" value="@item.RoomID" />
+                                                    <input type="hidden" name="checkIn" value="@checkIn?.ToString("yyyy-MM-dd")" />
+                                                    <input type="hidden" name="checkOut" value="@checkOut?.ToString("yyyy-MM-dd")" />
+                                                    <input type="number" name="quantity" value="1" min="1" max="@roomViewModel.RemainingAvailableRooms" class="form-control quantity-input" />
+                                                    <button type="submit" class="btn btn-dark">Book Now</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bootstrap Modal for Room Details (Copied from HomeController Index.cshtml) -->
+                                <div class="modal fade" id="roomDetailModal-@item.RoomID" tabindex="-1" aria-labelledby="roomDetailLabel-@item.RoomID" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                            <div class="modal-body p-0">
+                                                <div class="row g-0">
+                                                    <!-- Left Side: Room Image -->
+                                                    <div class="col-md-6 position-relative">
+                                                        <img src="@(string.IsNullOrEmpty(item.RoomPicture) ? "/Images/default-room.jpg" : $"/Images/{item.RoomPicture}")" class="img-fluid rounded-start"
+                                                             alt="Room Image" style="width: 100%; height: 460px;">
+                                                    </div>
+
+                                                    <!-- Right Side: Room Details -->
+                                                    <div class="col-md-6 p-4">
+                                                        <h3 class="fw-bold">@(string.IsNullOrEmpty(item.RoomHeadline) ? "Unnamed Room" : item.RoomHeadline)</h3>
+                                                        <p class="text-muted">@(string.IsNullOrEmpty(item.RoomDetailDescription) ? "No description available." : item.RoomDetailDescription)</p>
+
+                                                        <!-- Room Features -->
+                                                        <ul class="list-unstyled">
+                                                            <li><i class="fas fa-user-friends me-2"></i> <strong>Max Capacity:</strong> @(item.RoomMaxCapacity) people</li>
+                                                            <li><i class="fas fa-door-open me-2"></i> <strong>Room Type:</strong> @(item.RoomType?.RoomTypeName ?? "Unknown Type")</li>
+                                                        </ul>
+
+                                                        <!-- Room Amenities -->
+                                                        <h5 class="fw-bold mt-3">Room Amenities</h5>
+                                                        <div class="d-flex flex-wrap">
+                                                            <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-wifi"></i> Free WiFi</span>
+                                                            <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-concierge-bell"></i> 24/7 Service</span>
+                                                            <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-bed"></i> @(item.NumOfBed) Beds</span>
+                                                            <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-bath"></i> @(item.NumOfBath) Baths</span>
+                                                        </div>
+
+                                                        <!-- Price and Booking -->
+                                                        <div class="mt-4">
+                                                            <h4 class="fw-bold text-primary">$@item.RoomPricePerDay <small class="text-muted">per night</small></h4>
+                                                            <p><strong>Available Rooms:</strong> @roomViewModel.RemainingAvailableRooms</p>
+                                                            <form method="post" asp-controller="Booking" asp-action="BookNow" asp-route-Id="@item.RoomID">
+                                                                <input type="hidden" name="checkIn" value="@checkIn?.ToString("yyyy-MM-dd")" />
+                                                                <input type="hidden" name="checkOut" value="@checkOut?.ToString("yyyy-MM-dd")" />
+                                                                <div class="input-group mb-2">
+                                                                    <span class="input-group-text">Quantity</span>
+                                                                    <input type="number" name="quantity" value="1" min="1" max="@roomViewModel.RemainingAvailableRooms" class="form-control" />
+                                                                </div>
+                                                                <button type="submit" class="btn btn-warning w-100 mt-2">BOOK NOW</button>
+                                                            </form>
+                                                            <button class="btn btn-outline-secondary w-100 mt-2" data-bs-dismiss="modal">BACK TO LIST</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                    <!-- Pagination -->
+                    @if (totalPages > 1)
+                    {
+                        <div class="pagination-container">
+                            @if (currentPage > 1)
+                            {
+                                <a class="arrow" asp-action="Index" asp-controller="Room"
+                                   asp-route-checkIn="@(checkIn?.ToString("yyyy-MM-dd"))"
+                                   asp-route-checkOut="@(checkOut?.ToString("yyyy-MM-dd"))"
+                                   asp-route-searchAddress="@searchAddress"
+                                   asp-route-roomTypeFilter="@roomTypeFilter"
+                                   asp-route-searchHeadline="@searchHeadline"
+                                   asp-route-numberOfCustomers="@numberOfCustomers"
+                                   asp-route-maxCapacityFilter="@maxCapacityFilter"
+                                   asp-route-page="@(currentPage - 1)">&laquo;</a>
+                            }
+                            @for (int i = 1; i <= totalPages; i++)
+                            {
+                                <a class="@(i == currentPage ? "active" : "")" asp-action="Index" asp-controller="Room"
+                                   asp-route-checkIn="@(checkIn?.ToString("yyyy-MM-dd"))"
+                                   asp-route-checkOut="@(checkOut?.ToString("yyyy-MM-dd"))"
+                                   asp-route-searchAddress="@searchAddress"
+                                   asp-route-roomTypeFilter="@roomTypeFilter"
+                                   asp-route-searchHeadline="@searchHeadline"
+                                   asp-route-numberOfCustomers="@numberOfCustomers"
+                                   asp-route-maxCapacityFilter="@maxCapacityFilter"
+                                   asp-route-page="@i">@i</a>
+                            }
+                            @if (currentPage < totalPages)
+                            {
+                                <a class="arrow" asp-action="Index" asp-controller="Room"
+                                   asp-route-checkIn="@(checkIn?.ToString("yyyy-MM-dd"))"
+                                   asp-route-checkOut="@(checkOut?.ToString("yyyy-MM-dd"))"
+                                   asp-route-searchAddress="@searchAddress"
+                                   asp-route-roomTypeFilter="@roomTypeFilter"
+                                   asp-route-searchHeadline="@searchHeadline"
+                                   asp-route-numberOfCustomers="@numberOfCustomers"
+                                   asp-route-maxCapacityFilter="@maxCapacityFilter"
+                                   asp-route-page="@(currentPage + 1)">&raquo;</a>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="container-xxl py-5">
+                <div class="container text-center">
+                    <h4 class="text-muted">Please enter check-in and check-out dates to see available rooms.</h4>
+                </div>
+            </div>
+        }
+        <!-- Room End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

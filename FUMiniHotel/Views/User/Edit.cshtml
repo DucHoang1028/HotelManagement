@@ -1,0 +1,51 @@
+﻿@model FUMiniHotel.DAO.ViewModel.UserViewModel
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2>Edit User</h2>
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="FirstName" class="form-label">First Name</label>
+                        <input type="text" id="FirstName" class="form-control" asp-for="FirstName" placeholder="Enter first name" required>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="LastName" class="form-label">Last Name</label>
+                        <input type="text" id="LastName" class="form-control" asp-for="LastName" placeholder="Enter last name" required>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" id="Email" class="form-control" asp-for="Email" readonly />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="PhoneNumber" class="form-label">Phone Number</label>
+                        <input type="text" id="PhoneNumber" class="form-control" asp-for="PhoneNumber" placeholder="Enter phone number" required>
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label for="SelectedRole" class="form-label">Role</label>
+                        <select id="SelectedRole" class="form-select" asp-for="SelectedRole" asp-items="@ViewBag.Roles" required>
+                            <option value="">Select Role</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer mt-3">
+                    <button type="submit" class="btn btn-success">Update User</button>
+                    <a asp-action="Manage" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

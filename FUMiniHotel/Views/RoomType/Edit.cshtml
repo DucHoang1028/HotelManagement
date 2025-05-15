@@ -1,0 +1,47 @@
+﻿@model FUMiniHotel.DAO.RoomType
+
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2>Edit Room</h2>
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="RoomTypeID" />
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="RoomNumber" class="form-label">Room Type Name</label>
+                            <input type="text" id="RoomTypeName" class="form-control" asp-for="RoomTypeName" placeholder="Enter Room Type Name" required>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="TypeNote" class="form-label">Type Note</label>
+                                <input type="text" id="TypeNote" class="form-control" asp-for="TypeNote" placeholder="Enter Type Note" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="TypeDescription" class="form-label">Type Description</label>
+                                <input type="text" id="TypeDescription" class="form-control" asp-for="TypeDescription" placeholder="Enter Type Description" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Status</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="RoomTypeStatus" value="true" id="Active" checked>
+                                    <label class="form-check-label" for="Active">Active</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="RoomTypeStatus" value="false" id="InActive">
+                                    <label class="form-check-label" for="InActive">Inactive</label>
+                                </div>
+                            </div>
+                        </div>
+
+                <div class="modal-footer mt-3">
+                    <button type="submit" class="btn btn-success">Update Room</button>
+                    <a asp-action="Manage" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

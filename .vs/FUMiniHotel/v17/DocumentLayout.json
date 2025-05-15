@@ -1,0 +1,934 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\controllers\\qnacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\controllers\\qnacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\controllers\\roomtypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\controllers\\roomtypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\repositories\\irepositories\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|solutionrelative:repositories\\irepositories\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\room\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\room\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\room\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\room\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\fuminihotel.dao.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\fuminihotel.dao.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\booking\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\booking\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|solutionrelative:repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\repositories\\irepositories\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|solutionrelative:repositories\\irepositories\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\viewmodel\\roominformationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\viewmodel\\roominformationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\models\\bookingdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\models\\bookingdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\repositories\\irepositories\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|solutionrelative:repositories\\irepositories\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\booking\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\booking\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\booking\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\booking\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\models\\roominformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\models\\roominformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\repositories\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|solutionrelative:repositories\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\room\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\room\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\room\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\room\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\booking\\reservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\booking\\reservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\room\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\room\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\booking\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\booking\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\viewmodel\\bookingdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\viewmodel\\bookingdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\models\\bookingreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\models\\bookingreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\roomtype\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\roomtype\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\models\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\models\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\shared\\emailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\shared\\emailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|solutionrelative:repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\room\\statistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\room\\statistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\shared\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\shared\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E3D19AE-41E6-44CB-B8BC-8BF2CD936BAE}|Repositories\\FUMiniHotel.Repositories.csproj|solutionrelative:repositories\\questionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\roomtype\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\roomtype\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\roomtype\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\roomtype\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\migrations\\20250225015006_fixbookingdetailrelationship.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\migrations\\20250225015006_fixbookingdetailrelationship.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel\\views\\user\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EBB29DC-BD3E-4872-B6E6-021E97513D29}|FUMiniHotel\\FUMiniHotel.csproj|solutionrelative:fuminihotel\\views\\user\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\migrations\\20250319094828_updateinfo12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\migrations\\20250319094828_updateinfo12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|c:\\users\\admin\\source\\repos\\fuminihotel\\fuminihotel.dao\\migrations\\20250324011438_addquantity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B2F07E-4907-4AEE-96DF-C9DE784C593E}|FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj|solutionrelative:fuminihotel.dao\\migrations\\20250324011438_addquantity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 226,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "FUMiniHotel\\Controllers\\RoomController.cs",
+              "ViewState": "AgIAAMcCAAAAAAAAAAAowN0CAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:33:31.422Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QnAController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\QnAController.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Controllers\\QnAController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\QnAController.cs",
+              "RelativeToolTip": "FUMiniHotel\\Controllers\\QnAController.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAmwLMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:50:41.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T09:55:15.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAowIsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:55:18.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T22:25:33.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\appsettings.json",
+              "RelativeDocumentMoniker": "FUMiniHotel\\appsettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\appsettings.json",
+              "RelativeToolTip": "FUMiniHotel\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-19T09:13:27.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoomTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\RoomTypeController.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Controllers\\RoomTypeController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\RoomTypeController.cs",
+              "RelativeToolTip": "FUMiniHotel\\Controllers\\RoomTypeController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAiwGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T05:07:45.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAkwN4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T22:25:39.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "FUMiniHotel\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAMUCAAAAAAAAAAAowNsCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T00:23:39.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "FUMiniHotel\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAqwNoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T20:41:55.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "FUMiniHotel\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAowEQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:50:14.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\IRepositories\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IRepositories\\IAccountRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\IRepositories\\IAccountRepository.cs",
+              "RelativeToolTip": "Repositories\\IRepositories\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:11:00.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAIcDAAAAAAAAAAAowMwDAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T01:36:44.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Manage.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Booking\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Manage.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Booking\\Manage.cshtml",
+              "ViewState": "AgIAANkBAAAAAAAAAAAowO8BAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T08:45:43.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAuwJAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T08:53:48.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Index.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Room\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Index.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Room\\Index.cshtml",
+              "ViewState": "AgIAABUBAAAAAAAAAAAYwBsBAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T17:49:45.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Room\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Edit.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Room\\Edit.cshtml",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAuwJQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:37:44.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FUMiniHotel.DAO.csproj",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj",
+              "RelativeToolTip": "FUMiniHotel.DAO\\FUMiniHotel.DAO.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-24T02:33:48.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RoomInformationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\ViewModel\\RoomInformationViewModel.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\ViewModel\\RoomInformationViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\ViewModel\\RoomInformationViewModel.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\ViewModel\\RoomInformationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T01:41:00.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\BookingRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\BookingRepository.cs",
+              "RelativeToolTip": "Repositories\\BookingRepository.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAswLMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:07:41.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IBookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\IRepositories\\IBookingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IRepositories\\IBookingRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\IRepositories\\IBookingRepository.cs",
+              "RelativeToolTip": "Repositories\\IRepositories\\IBookingRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBYAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T10:20:59.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IRoomRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\IRepositories\\IRoomRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IRepositories\\IRoomRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\IRepositories\\IRoomRepository.cs",
+              "RelativeToolTip": "Repositories\\IRepositories\\IRoomRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T23:41:46.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BookingDetail.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\BookingDetail.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\Models\\BookingDetail.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\BookingDetail.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\Models\\BookingDetail.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T19:53:19.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Booking\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Edit.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Booking\\Edit.cshtml",
+              "ViewState": "AgIAANUAAAAAAAAAAAAowOsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T20:01:46.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Create.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Booking\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Create.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Booking\\Create.cshtml",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAowH0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:46:32.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RoomInformation.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\RoomInformation.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\Models\\RoomInformation.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\RoomInformation.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\Models\\RoomInformation.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T04:33:14.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RoomRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\RoomRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\RoomRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\RoomRepository.cs",
+              "RelativeToolTip": "Repositories\\RoomRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwCEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T23:41:55.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "20250324011438_addquantity.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Migrations\\20250324011438_addquantity.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\Migrations\\20250324011438_addquantity.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Migrations\\20250324011438_addquantity.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\Migrations\\20250324011438_addquantity.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T01:14:38.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Manage.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Room\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Manage.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Room\\Manage.cshtml",
+              "ViewState": "AgIAACwBAAAAAAAAAAAAAD8BAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T23:42:13.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Create.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Room\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Create.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Room\\Create.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwHMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:32:27.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Detail.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Room\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Detail.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Room\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T19:13:23.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Detail.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Booking\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Detail.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Booking\\Detail.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAuwBoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T20:01:33.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Reservation.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Reservation.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Booking\\Reservation.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Booking\\Reservation.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Booking\\Reservation.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwFkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T05:06:58.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BookingDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\ViewModel\\BookingDetailViewModel.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\ViewModel\\BookingDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\ViewModel\\BookingDetailViewModel.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\ViewModel\\BookingDetailViewModel.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T20:55:03.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "BookingReservation.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\BookingReservation.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\Models\\BookingReservation.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\BookingReservation.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\Models\\BookingReservation.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T21:30:42.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\RoomType\\Manage.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\RoomType\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\RoomType\\Manage.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\RoomType\\Manage.cshtml",
+              "ViewState": "AgIAAGIBAAAAAAAAAAAowG0BAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T04:17:16.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "RoomType.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\RoomType.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\Models\\RoomType.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Models\\RoomType.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\Models\\RoomType.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:41:56.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T00:55:26.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EmailSenderService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Shared\\EmailSenderService.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Shared\\EmailSenderService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Shared\\EmailSenderService.cs",
+              "RelativeToolTip": "FUMiniHotel\\Shared\\EmailSenderService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T22:27:20.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "Repositories\\AccountRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:11:05.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Statistics.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Statistics.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Room\\Statistics.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Room\\Statistics.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Room\\Statistics.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T20:04:30.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T19:00:54.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Shared\\FileService.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Shared\\FileService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Shared\\FileService.cs",
+              "RelativeToolTip": "FUMiniHotel\\Shared\\FileService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T16:22:32.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "QuestionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\QuestionRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\QuestionRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\Repositories\\QuestionRepository.cs",
+              "RelativeToolTip": "Repositories\\QuestionRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:07:45.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\RoomType\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\RoomType\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\RoomType\\Edit.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\RoomType\\Edit.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T04:14:03.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "20250225015006_FixBookingDetailRelationship.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Migrations\\20250225015006_FixBookingDetailRelationship.Designer.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Migrations\\20250225015006_FixBookingDetailRelationship.Designer.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Migrations\\20250225015006_FixBookingDetailRelationship.Designer.cs",
+              "RelativeToolTip": "FUMiniHotel\\Migrations\\20250225015006_FixBookingDetailRelationship.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:09:33.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\RoomType\\Create.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\RoomType\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\RoomType\\Create.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\RoomType\\Create.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAowDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T04:13:56.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "FUMiniHotel\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "FUMiniHotel\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-03-20T00:58:42.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:13:12.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\User\\Create.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\User\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\User\\Create.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\User\\Create.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:23:50.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T02:12:50.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\User\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\User\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\User\\Edit.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\User\\Edit.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwDIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T09:28:53.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T02:07:18.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "_AuthLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T00:55:25.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\User\\Manage.cshtml",
+              "RelativeDocumentMoniker": "FUMiniHotel\\Views\\User\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel\\Views\\User\\Manage.cshtml",
+              "RelativeToolTip": "FUMiniHotel\\Views\\User\\Manage.cshtml",
+              "ViewState": "AgIAAEABAAAAAAAAAADwv04BAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-19T09:28:59.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "20250319094828_updateinfo12.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Migrations\\20250319094828_updateinfo12.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\Migrations\\20250319094828_updateinfo12.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\Migrations\\20250319094828_updateinfo12.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\Migrations\\20250319094828_updateinfo12.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:48:28.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\ViewModel\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "FUMiniHotel.DAO\\ViewModel\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\FUMiniHotel\\FUMiniHotel.DAO\\ViewModel\\UserViewModel.cs",
+              "RelativeToolTip": "FUMiniHotel.DAO\\ViewModel\\UserViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:25:30.861Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

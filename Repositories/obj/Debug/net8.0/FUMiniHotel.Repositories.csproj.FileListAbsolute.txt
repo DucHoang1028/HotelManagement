@@ -1,0 +1,15 @@
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHotel.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHotel.Repositories.AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHotel.Repositories.AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHotel.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\bin\Debug\net8.0\FUMiniHotel.Repositories.deps.json
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\bin\Debug\net8.0\FUMiniHotel.Repositories.dll
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\bin\Debug\net8.0\FUMiniHotel.Repositories.pdb
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\bin\Debug\net8.0\FUMiniHotel.DAO.dll
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\bin\Debug\net8.0\FUMiniHotel.DAO.pdb
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHotel.Repositories.csproj.AssemblyReference.cache
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHo.AA0FC016.Up2Date
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHotel.Repositories.dll
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\refint\FUMiniHotel.Repositories.dll
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\FUMiniHotel.Repositories.pdb
+C:\Users\ADMIN\source\repos\FUMiniHotel\Repositories\obj\Debug\net8.0\ref\FUMiniHotel.Repositories.dll

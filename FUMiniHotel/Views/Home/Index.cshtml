@@ -1,0 +1,983 @@
+﻿@model FUMiniHotel.Controllers.PagedResult<FUMiniHotel.DAO.ViewModel.RoomInformationViewModel>
+@{
+    DateTime? checkIn = ViewBag.CheckIn as DateTime?;
+    DateTime? checkOut = ViewBag.CheckOut as DateTime?;
+    string searchAddress = ViewBag.SearchAddress as string;
+    int? roomTypeFilter = ViewBag.RoomTypeFilter as int?;
+    string searchHeadline = ViewBag.SearchHeadline as string;
+    int? numberOfCustomers = ViewBag.NumberOfCustomers as int?;
+    int? maxCapacityFilter = ViewBag.MaxCapacityFilter as int?;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hotelier - Hotel HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .featured-rooms-carousel .room-item {
+            width: 35%;
+            margin: 0 auto;
+        }
+
+        .featured-rooms-carousel .owl-stage {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .featured-rooms-carousel .owl-item {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .featured-rooms-carousel .room-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+        }
+
+        .pagination .page-link {
+            color: #007bff;
+        }
+
+            .pagination .page-link:hover {
+                background-color: #e9ecef;
+            }
+
+        .filter-form .form-control,
+        .filter-form .form-select {
+            border-radius: 5px;
+        }
+
+        .filter-form .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+            .filter-form .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .quantity-input {
+            width: 60px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0 mb-5">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-controller="Room" asp-action="Index" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                    <a asp-controller="Booking" asp-action="Reservation" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-controller="Room" asp-action="Index" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                    <a asp-controller="Booking" asp-action="Reservation" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel End -->
+        <!-- Booking Start -->
+        <div class="container-fluid booking pb-3 wow fadeIn" data-wow-delay="0.1s"
+             style="position: sticky; top: 0; z-index: 999; background: white; width: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div class="container">
+                <div class="bg-white p-3">
+                    <form method="get" asp-controller="Home" asp-action="Index">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-10">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <div class="date">
+                                            <input type="date" class="form-control" name="checkIn"
+                                                   value="@(checkIn?.ToString("yyyy-MM-dd"))" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="date">
+                                            <input type="date" class="form-control" name="checkOut"
+                                                   value="@(checkOut?.ToString("yyyy-MM-dd"))" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="number-of-customers">
+                                            <input type="number" class="form-control" name="numberOfCustomers"
+                                                   value="@numberOfCustomers"
+                                                   placeholder="Number of Customers" min="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Booking End -->
+        <!-- Error Message -->
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="mt-2 text-danger text-center">
+                <strong>@ViewBag.ErrorMessage</strong>
+            </div>
+        }
+
+        @if (TempData["UnavailableRoomsMessage"] != null)
+        {
+            <div class="mt-2 text-warning text-center">
+                <strong>@TempData["UnavailableRoomsMessage"]</strong>
+            </div>
+        }
+
+        <!-- Featured Rooms Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Featured Rooms</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Featured Rooms</span></h1>
+                </div>
+
+                <!-- Filter Form -->
+                @if (string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                {
+                    <div class="filter-form">
+                        <form method="get" class="row g-3">
+                            <input type="hidden" name="checkIn" value="@checkIn?.ToString("yyyy-MM-dd")" />
+                            <input type="hidden" name="checkOut" value="@checkOut?.ToString("yyyy-MM-dd")" />
+                            <input type="hidden" name="numberOfCustomers" value="@numberOfCustomers" />
+                            <div class="col-md-3">
+                                <input type="text" name="searchHeadline" class="form-control" placeholder="Search by headline" value="@searchHeadline" />
+                            </div>
+                            <div class="col-md-2">
+                                <select name="roomTypeFilter" class="form-select">
+                                    <option value="">All Room Types</option>
+                                    @foreach (var roomType in ViewBag.RoomType as List<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem>)
+                                    {
+                                        if (roomTypeFilter.HasValue && roomTypeFilter.Value.ToString() == roomType.Value)
+                                        {
+                                            <option value="@roomType.Value" selected>@roomType.Text</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@roomType.Value">@roomType.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <select name="maxCapacityFilter" class="form-select">
+                                    <option value="">All Capacities</option>
+                                    @foreach (var capacity in ViewBag.MaxCapacities as List<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem>)
+                                    {
+                                        if (maxCapacityFilter.HasValue && maxCapacityFilter.Value.ToString() == capacity.Value)
+                                        {
+                                            <option value="@capacity.Value" selected>@capacity.Text</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@capacity.Value">@capacity.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" name="searchAddress" class="form-control" placeholder="Search by address" value="@searchAddress" />
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary w-100">Filter</button>
+                            </div>
+                        </form>
+                    </div>
+                }
+
+                @if (!checkIn.HasValue || !checkOut.HasValue)
+                {
+                    <div class="text-center">
+                        <h4 class="text-muted">Enter check-in and check-out dates to see available rooms.</h4>
+                    </div>
+                }
+                else if (!Model.Items.Any())
+                {
+                    <div class="col-12 text-center">
+                        <h4 class="text-muted">No featured rooms available for the selected dates.</h4>
+                    </div>
+                }
+                else
+                {
+                    <div class="row g-4">
+                        @foreach (var viewModel in Model.Items)
+                        {
+                            var item = viewModel.Room;
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="room-item shadow rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <img class="img-fluid" src="@(string.IsNullOrEmpty(item.RoomPicture) ? "/Images/default-room.jpg" : $"/Images/{item.RoomPicture}")" alt="Room Image">
+                                        <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">@item.RoomPricePerDay$/day</small>
+                                    </div>
+                                    <div class="p-4 mt-2">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <h5 class="mb-0">@(string.IsNullOrEmpty(item.RoomHeadline) ? "Unnamed Room" : item.RoomHeadline)</h5>
+                                            <div class="ps-2">
+                                                <small class="fa fa-star text-primary"></small>
+                                                <small class="fa fa-star text-primary"></small>
+                                                <small class="fa fa-star text-primary"></small>
+                                                <small class="fa fa-star text-primary"></small>
+                                                <small class="fa fa-star text-primary"></small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                            <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>@(item.NumOfBed) Bed</small>
+                                            <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>@(item.NumOfBath) Bath</small>
+                                            <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                        </div>
+                                        <p class="text-body mb-3">@(item.RoomType?.RoomTypeName ?? "Unknown Type")</p>
+                                        <p class="text-body mb-3"><strong>Address:</strong> @(item.Address ?? "N/A")</p>
+                                        <p class="text-body mb-3"><strong>Max Capacity:</strong> @item.RoomMaxCapacity</p>
+                                        <p class="text-body mb-3"><strong>Available Rooms:</strong> @viewModel.RemainingAvailableRooms</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn btn-sm btn-primary rounded py-2 px-4" data-bs-toggle="modal" data-bs-target="#roomDetailModal-@item.RoomID">
+                                                View Detail
+                                            </button>
+                                            <!-- Inline Book Now Form -->
+                                            @if (User.Identity.IsAuthenticated)
+                                            {
+                                                <form method="post" asp-controller="Booking" asp-action="BookNow" asp-route-Id="@item.RoomID" class="d-flex align-items-center">
+                                                    <input type="hidden" name="checkIn" value="@checkIn?.ToString("yyyy-MM-dd")" />
+                                                    <input type="hidden" name="checkOut" value="@checkOut?.ToString("yyyy-MM-dd")" />
+                                                    <input type="number" name="quantity" value="1" min="1" max="@viewModel.RemainingAvailableRooms" class="form-control quantity-input" />
+                                                    <button type="submit" class="btn btn-sm btn-dark rounded py-2 px-4">Book Now</button>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <form method="get" asp-area="Identity" asp-page="/Account/Login" class="d-flex align-items-center">
+                                                    <input type="hidden" name="ReturnUrl" value="@Url.Action("Index", "Home", new { checkIn = checkIn?.ToString("yyyy-MM-dd"), checkOut = checkOut?.ToString("yyyy-MM-dd"), searchAddress, roomTypeFilter, searchHeadline, numberOfCustomers, maxCapacityFilter })" />
+                                                    <input type="number" name="quantity" value="1" min="1" max="@viewModel.RemainingAvailableRooms" class="form-control quantity-input" disabled />
+                                                    <button type="submit" class="btn btn-sm btn-dark rounded py-2 px-4">Book Now</button>
+                                                </form>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bootstrap Modal for Room Details -->
+                            <div class="modal fade" id="roomDetailModal-@item.RoomID" tabindex="-1" aria-labelledby="roomDetailLabel-@item.RoomID" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-body p-0">
+                                            <div class="row g-0">
+                                                <!-- Left Side: Room Image -->
+                                                <div class="col-md-6 position-relative">
+                                                    <img src="@(string.IsNullOrEmpty(item.RoomPicture) ? "/Images/default-room.jpg" : $"/Images/{item.RoomPicture}")" class="img-fluid rounded-start"
+                                                         alt="Room Image" style="width: 100%; height: 460px;">
+                                                </div>
+
+                                                <!-- Right Side: Room Details -->
+                                                <div class="col-md-6 p-4">
+                                                    <h3 class="fw-bold">@(string.IsNullOrEmpty(item.RoomHeadline) ? "Unnamed Room" : item.RoomHeadline)</h3>
+                                                    <p class="text-muted">@(string.IsNullOrEmpty(item.RoomDetailDescription) ? "No description available." : item.RoomDetailDescription)</p>
+
+                                                    <!-- Room Features -->
+                                                    <ul class="list-unstyled">
+                                                        <li><i class="fas fa-user-friends me-2"></i> <strong>Max Capacity:</strong> @(item.RoomMaxCapacity) people</li>
+                                                        <li><i class="fas fa-door-open me-2"></i> <strong>Room Type:</strong> @(item.RoomType?.RoomTypeName ?? "Unknown Type")</li>
+                                                    </ul>
+
+                                                    <!-- Room Amenities -->
+                                                    <h5 class="fw-bold mt-3">Room Amenities</h5>
+                                                    <div class="d-flex flex-wrap">
+                                                        <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-wifi"></i> Free WiFi</span>
+                                                        <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-concierge-bell"></i> 24/7 Service</span>
+                                                        <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-bed"></i> @(item.NumOfBed) Beds</span>
+                                                        <span class="badge bg-light text-dark p-2 me-2"><i class="fas fa-bath"></i> @(item.NumOfBath) Baths</span>
+                                                    </div>
+
+                                                    <!-- Price and Booking -->
+                                                    <div class="mt-4">
+                                                        <h4 class="fw-bold text-primary">$@item.RoomPricePerDay <small class="text-muted">per night</small></h4>
+                                                        <p><strong>Available Rooms:</strong> @viewModel.RemainingAvailableRooms</p>
+                                                        <!-- Modal Book Now Form -->
+                                                        @if (User.Identity.IsAuthenticated)
+                                                        {
+                                                            <form method="post" asp-controller="Booking" asp-action="BookNow" asp-route-Id="@item.RoomID">
+                                                                <input type="hidden" name="checkIn" value="@checkIn?.ToString("yyyy-MM-dd")" />
+                                                                <input type="hidden" name="checkOut" value="@checkOut?.ToString("yyyy-MM-dd")" />
+                                                                <div class="input-group mb-2">
+                                                                    <span class="input-group-text">Quantity</span>
+                                                                    <input type="number" name="quantity" value="1" min="1" max="@viewModel.RemainingAvailableRooms" class="form-control" />
+                                                                </div>
+                                                                <button type="submit" class="btn btn-warning w-100 mt-2">BOOK NOW</button>
+                                                            </form>
+                                                        }
+                                                        else
+                                                        {
+                                                            <form method="get" asp-area="Identity" asp-page="/Account/Login">
+                                                                <input type="hidden" name="ReturnUrl" value="@Url.Action("Index", "Home", new { checkIn = checkIn?.ToString("yyyy-MM-dd"), checkOut = checkOut?.ToString("yyyy-MM-dd"), searchAddress, roomTypeFilter, searchHeadline, numberOfCustomers, maxCapacityFilter })" />
+                                                                <div class="input-group mb-2">
+                                                                    <span class="input-group-text">Quantity</span>
+                                                                    <input type="number" name="quantity" value="1" min="1" max="@viewModel.RemainingAvailableRooms" class="form-control" disabled />
+                                                                </div>
+                                                                <button type="submit" class="btn btn-warning w-100 mt-2">BOOK NOW</button>
+                                                            </form>
+                                                        }
+                                                        <button class="btn btn-outline-secondary w-100 mt-2" data-bs-dismiss="modal">BACK TO LIST</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Pagination Start -->
+                    @if (Model.TotalPages > 1)
+                    {
+                        <div class="d-flex justify-content-center mt-4">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                                        <a class="page-link" asp-action="Index" asp-controller="Home"
+                                           asp-route-checkIn="@(checkIn?.ToString("yyyy-MM-dd"))"
+                                           asp-route-checkOut="@(checkOut?.ToString("yyyy-MM-dd"))"
+                                           asp-route-searchAddress="@searchAddress"
+                                           asp-route-roomTypeFilter="@roomTypeFilter"
+                                           asp-route-searchHeadline="@searchHeadline"
+                                           asp-route-numberOfCustomers="@numberOfCustomers"
+                                           asp-route-maxCapacityFilter="@maxCapacityFilter"
+                                           asp-route-pageNumber="@(Model.PageNumber - 1)">Previous</a>
+                                    </li>
+                                    @for (int i = 1; i <= Model.TotalPages; i++)
+                                    {
+                                        <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                                            <a class="page-link" asp-action="Index" asp-controller="Home"
+                                               asp-route-checkIn="@(checkIn?.ToString("yyyy-MM-dd"))"
+                                               asp-route-checkOut="@(checkOut?.ToString("yyyy-MM-dd"))"
+                                               asp-route-searchAddress="@searchAddress"
+                                               asp-route-roomTypeFilter="@roomTypeFilter"
+                                               asp-route-searchHeadline="@searchHeadline"
+                                               asp-route-numberOfCustomers="@numberOfCustomers"
+                                               asp-route-maxCapacityFilter="@maxCapacityFilter"
+                                               asp-route-pageNumber="@i">@i</a>
+                                        </li>
+                                    }
+                                    <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                                        <a class="page-link" asp-action="Index" asp-controller="Home"
+                                           asp-route-checkIn="@(checkIn?.ToString("yyyy-MM-dd"))"
+                                           asp-route-checkOut="@(checkOut?.ToString("yyyy-MM-dd"))"
+                                           asp-route-searchAddress="@searchAddress"
+                                           asp-route-roomTypeFilter="@roomTypeFilter"
+                                           asp-route-searchHeadline="@searchHeadline"
+                                           asp-route-numberOfCustomers="@numberOfCustomers"
+                                           asp-route-maxCapacityFilter="@maxCapacityFilter"
+                                           asp-route-pageNumber="@(Model.PageNumber + 1)">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    }
+                    <!-- Pagination End -->
+                    <!-- Explore More Rooms Link -->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="text-center mt-4">
+                            <a asp-controller="Room" asp-action="Index" class="btn btn-primary py-3 px-5">Explore More Rooms</a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <!-- Featured Rooms End -->
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
+                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Hotelier</span></h1>
+                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <div class="row g-3 pb-4">
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                        <p class="mb-0">Rooms</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                        <p class="mb-0">Staffs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                        <p class="mb-0">Clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- Room Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Rooms</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Rooms</span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/room-1.jpg" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Junior Suite</h5>
+                                    <div class="ps-2">
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                </div>
+                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" asp-area="Identity" asp-page="/Account/Login" asp-route-ReturnUrl="@Url.Action("Index", "Home")">Book Now</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/room-2.jpg" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Executive Suite</h5>
+                                    <div class="ps-2">
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                </div>
+                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" asp-area="Identity" asp-page="/Account/Login" asp-route-ReturnUrl="@Url.Action("Index", "Home")">Book Now</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/room-3.jpg" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Super Deluxe</h5>
+                                    <div class="ps-2">
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                        <small class="fa fa-star text-primary"></small>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                </div>
+                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" asp-area="Identity" asp-page="/Account/Login" asp-route-ReturnUrl="@Url.Action("Index", "Home")">Book Now</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Room End -->
+        <!-- Video Start -->
+        <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5">
+                        <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
+                        <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
+                        <p class="text-white mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Room" asp-action="Index" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
+                            <a asp-controller="Booking" asp-action="Reservation" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
+                        }
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video">
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                    allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video End -->
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-hotel fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Rooms & Appartment</h5>
+                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-utensils fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Food & Restaurant</h5>
+                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-spa fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Spa & Fitness</h5>
+                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-swimmer fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Sports & Gaming</h5>
+                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-glass-cheers fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Event & Party</h5>
+                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">GYM & Yoga</h5>
+                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        <!-- Testimonial Start -->
+        <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="owl-carousel testimonial-carousel py-5">
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Full Name</h5>
+                                <small>Designation</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-2.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Full Name</h5>
+                                <small>Designation</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Full Name</h5>
+                                <small>Designation</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Full Name</h5>
+                                <small>Designation</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        <!-- Newsletter Start -->
+        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 border rounded p-1">
+                    <div class="border rounded text-center p-1">
+                        <div class="bg-white rounded text-center p-5">
+                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                            <div class="position-relative mx-auto" style="max-width: 400px;">
+                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter End -->
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-primary rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotelier</h1></a>
+                            <p class="text-white mb-0">
+                                Download <a class="text-dark fw-medium" href="https://htmlcodex.com/hotel-html-template-pro">Hotelier – Premium Version</a>, build a professional website for your hotel business and grab the attention of new visitors upon your site’s launch.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
+                                <a class="btn btn-link" href="">About Us</a>
+                                <a class="btn btn-link" href="">Contact Us</a>
+                                <a class="btn btn-link" href="">Privacy Policy</a>
+                                <a class="btn btn-link" href="">Terms & Condition</a>
+                                <a class="btn btn-link" href="">Support</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
+                                <a class="btn btn-link" href="">Food & Restaurant</a>
+                                <a class="btn btn-link" href="">Spa & Fitness</a>
+                                <a class="btn btn-link" href="">Sports & Gaming</a>
+                                <a class="btn btn-link" href="">Event & Party</a>
+                                <a class="btn btn-link" href="">GYM & Yoga</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            © <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>x

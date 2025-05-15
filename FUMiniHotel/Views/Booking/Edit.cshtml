@@ -1,0 +1,236 @@
+﻿@model FUMiniHotel.DAO.ViewModel.BookingDetailViewModel
+
+<div class="container my-5 p-4 bg-white shadow-sm rounded">
+    <form asp-action="Edit" asp-controller="Booking" method="post">
+        <input type="hidden" asp-for="BookingReservationID" />
+
+        <!-- Validation Summary -->
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+        <table class="table">
+            <tr>
+                <th>Booking ID</th>
+                <td>@Model.BookingReservationID</td>
+            </tr>
+            <tr>
+                <th>Customer Name</th>
+                <td>@Model.CustomerName</td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td>@Model.PhoneNumber</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>@Model.Email</td>
+            </tr>
+            <tr>
+                <th>Booking Date</th>
+                <td>@Model.BookingDate?.ToString("yyyy-MM-dd")</td>
+            </tr>
+            <tr>
+                <th>Total Price</th>
+                <td>$@Model.TotalPrice</td>
+            </tr>
+            <tr>
+                <th>Booking Status</th>
+                <td>
+                    <select asp-for="BookingStatus" class="form-select">
+                        <option value="1" selected="@(Model.BookingStatus == 1)">Need Confirm</option>
+                        <option value="2" selected="@(Model.BookingStatus == 2)">Confirmed</option>
+                        <option value="3" selected="@(Model.BookingStatus == 3)">Active</option>
+                        <option value="4" selected="@(Model.BookingStatus == 4)">Finished</option>
+                        <option value="5" selected="@(Model.BookingStatus == 5)">Canceled</option>
+                    </select>
+                    <span asp-validation-for="BookingStatus" class="text-danger"></span>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Booking Details</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Room Picture</th>
+                    <th>Room</th>
+                    <th>Room Number</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.BookingDetails.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <img class="img-fluid me-3" src="/Images/@Model.BookingDetails[i].Room?.RoomPicture" alt="Room Image"
+                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                        </td>
+                        <td>
+                            <input type="hidden" name="BookingDetails[@i].BookingDetailID" value="@Model.BookingDetails[i].BookingDetailID" />
+                            <select name="BookingDetails[@i].RoomID" class="form-select">
+                                @foreach (var room in ViewBag.Rooms)
+                                {
+                                    <option value="@room.Value" selected="@(room.Value == Model.BookingDetails[i].RoomID.ToString())">
+                                        @room.Text
+                                    </option>
+                                }
+                            </select>
+                            <span asp-validation-for="BookingDetails[i].RoomID" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input type="text" name="BookingDetails[@i].RoomNumber" value="@Model.BookingDetails[i].RoomNumber" class="form-control" />
+                            <span asp-validation-for="BookingDetails[i].RoomNumber" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input type="date" name="BookingDetails[@i].StartDate" value="@Model.BookingDetails[i].StartDate?.ToString("yyyy-MM-dd")" class="form-control" />
+                            <span asp-validation-for="BookingDetails[i].StartDate" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input type="date" name="BookingDetails[@i].EndDate" value="@Model.BookingDetails[i].EndDate?.ToString("yyyy-MM-dd")" class="form-control" />
+                            <span asp-validation-for="BookingDetails[i].EndDate" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input type="number" step="0.01" name="BookingDetails[@i].ActualPrice" value="@Model.BookingDetails[i].ActualPrice" class="form-control" disabled />
+                            <span asp-validation-for="BookingDetails[i].ActualPrice" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <form asp-action="DeleteBookingDetail" asp-controller="Booking" method="post"
+                                  onsubmit="return confirm('Are you sure you want to remove this booking detail?');">
+                                <input type="hidden" name="id" value="@Model.BookingDetails[i].BookingDetailID" />
+                                <input type="hidden" name="bookingReservationId" value="@Model.BookingReservationID" />
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="material-icons"></i> Remove
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Add New Booking Detail Section -->
+        <h3>Add New Booking Detail</h3>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="NewBookingDetail.RoomID" class="form-label">Room</label>
+                        <select asp-for="NewBookingDetail.RoomID" class="form-select">
+                            <option value="">Select Room</option>
+                            @foreach (var room in ViewBag.Rooms)
+                            {
+                                <option value="@room.Value" data-price="@room.RoomPricePerDay">@room.Text</option>
+                            }
+                        </select>
+                        <span asp-validation-for="NewBookingDetail.RoomID" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label asp-for="NewBookingDetail.RoomNumber" class="form-label">Room Number</label>
+                        <input type="text" asp-for="NewBookingDetail.RoomNumber" class="form-control" placeholder="Enter room number" />
+                        <span asp-validation-for="NewBookingDetail.RoomNumber" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label asp-for="NewBookingDetail.StartDate" class="form-label">Start Date</label>
+                        <input type="date" asp-for="NewBookingDetail.StartDate" class="form-control" />
+                        <span asp-validation-for="NewBookingDetail.StartDate" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label asp-for="NewBookingDetail.EndDate" class="form-label">End Date</label>
+                        <input type="date" asp-for="NewBookingDetail.EndDate" class="form-control" />
+                        <span asp-validation-for="NewBookingDetail.EndDate" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <label asp-for="NewBookingDetail.ActualPrice" class="form-label">Price</label>
+                        <input type="number" step="0.01" asp-for="NewBookingDetail.ActualPrice" class="form-control" disabled />
+                        <span asp-validation-for="NewBookingDetail.ActualPrice" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancel and Save Buttons -->
+        <div class="d-flex justify-content-between">
+            <a href="@Url.Action("Manage", "Booking")" class="btn btn-secondary">Back To List</a>
+            <button type="submit" class="btn btn-success">Save Changes</button>
+        </div>
+    </form>
+
+    <!-- Success and Error Messages -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div id="successMessage" class="alert alert-success mt-3">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+</div>
+
+<!-- JavaScript for Dynamic Updates -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const roomSelect = document.querySelector("select[name='NewBookingDetail.RoomID']");
+        const startDateInput = document.querySelector("input[name='NewBookingDetail.StartDate']");
+        const endDateInput = document.querySelector("input[name='NewBookingDetail.EndDate']");
+        const priceInput = document.querySelector("input[name='NewBookingDetail.ActualPrice']");
+        const roomImage = document.getElementById("roomImage");
+
+       // Function to update the room image
+        const updateRoomImage = () => {
+            const roomId = roomSelect.value;
+            if (roomId) {
+                const selectedOption = roomSelect.options[roomSelect.selectedIndex];
+                const roomPicture = selectedOption.getAttribute("data-picture");
+                roomImage.src = `/Images/${roomPicture}`; // Use the full file name with extension
+                roomImage.style.display = "block";
+            } else {
+                roomImage.src = "/Images/default.jpg";
+                roomImage.style.display = "none";
+            }
+        };
+
+        // Function to calculate the price
+        const calculatePrice = () => {
+            const roomId = roomSelect.value;
+            const startDate = startDateInput.value;
+            const endDate = endDateInput.value;
+
+            if (roomId && startDate && endDate) {
+                // Fetch the room price from the data-price attribute
+                const roomPrice = parseFloat(roomSelect.options[roomSelect.selectedIndex].getAttribute("data-price"));
+
+                // Calculate the duration in days
+                const start = new Date(startDate);
+                const end = new Date(endDate);
+                const duration = (end - start) / (1000 * 60 * 60 * 24); // Convert milliseconds to days
+
+                // Calculate the total price
+                const totalPrice = roomPrice * duration;
+
+                // Update the price field
+                priceInput.value = totalPrice.toFixed(2);
+            } else {
+                priceInput.value = ""; // Clear the price if any field is missing
+            }
+        };
+
+        // Add event listeners to update the image and price when fields change
+        roomSelect.addEventListener("change", () => {
+            updateRoomImage();
+            calculatePrice();
+        });
+
+        startDateInput.addEventListener("change", calculatePrice);
+        endDateInput.addEventListener("change", calculatePrice);
+
+        // Initialize the image and price on page load
+        updateRoomImage();
+        calculatePrice();
+    });
+</script>

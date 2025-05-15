@@ -1,0 +1,90 @@
+﻿@model List<FUMiniHotel.DAO.BookingDetail>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="card shadow p-4">
+            <h2 class="mb-4">Your Reservations</h2>
+
+            @if (!Model.Any())
+            {
+                <p>Your reservation is empty.</p>
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price/Day</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img class="img-fluid me-3" src="/Images/@item.Room.RoomPicture" alt="Room Image" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                                    <div>
+                                        <span><strong>@item.Room.RoomHeadline</strong></span>
+                                        <br />
+                                        <small>
+                                            Check-in: @item.StartDate?.ToShortDateString()
+                                            <br />
+                                            Check-out: @item.EndDate?.ToShortDateString()
+                                        </small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <form asp-action="UpdateQuantity" asp-controller="Booking" method="post" class="d-flex align-items-center">
+                                        <input type="hidden" name="bookingDetailId" value="@item.BookingDetailID" />
+                                        <input type="number" name="quantity" value="@item.Quantity" min="1" class="form-control d-inline-block" style="width: 80px;" />
+                                        <button type="submit" class="btn btn-primary btn-sm ms-2">Update</button>
+                                    </form>
+                                </td>
+                                <td>$@item.Room.RoomPricePerDay</td>
+                                <td>$@item.ActualPrice</td>
+                                <td>
+                                    <form asp-action="RemoveFromCart" asp-controller="Booking" method="post">
+                                        <input type="hidden" name="bookingId" value="@item.BookingDetailID" />
+                                        <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <!-- Summary -->
+                <div class="text-end">
+                    <h4><strong>Total:</strong> $@(Model.Sum(b => b.ActualPrice ?? 0))</h4>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex justify-content-between mt-3">
+                    <a asp-action="Index" asp-controller="Room" class="btn btn-secondary">Continue Shopping</a>
+                    <form method="post" asp-action="ConfirmBooking" asp-controller="Booking">
+                        <button type="submit" class="btn btn-success">Confirm Booking</button>
+                    </form>
+                </div>
+            }
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success mt-3">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger mt-3">
+                    @TempData["ErrorMessage"]
+                </div>
+            }
+        </div>
+    </div>
+</body>

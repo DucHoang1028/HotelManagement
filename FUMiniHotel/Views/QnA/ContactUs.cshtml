@@ -1,0 +1,50 @@
+﻿@model List<FUMiniHotel.Models.Question>
+@using FUMiniHotel.Models
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container mt-4">
+    <h2>Contact Us</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p class="text-muted">Have a question? Submit it below, and our staff will get back to you!</p>
+            @if (Model != null && Model.Any())
+            {
+                <div class="mb-4">
+                    <h4>Answered Questions</h4>
+                    <div class="list-group">
+                        @foreach (var question in Model)
+                        {
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">@question.QuestionText</h5>
+                                    <small>@question.AnsweredDate?.ToShortDateString() ?? "N/A"</small>
+                                </div>
+                                <p class="mb-1">@question.AnswerText</p>
+                                <small class="text-muted">
+                                    Asked by:
+                                    @(question.AskedBy != null ? $"{question.AskedBy.FirstName} {question.AskedBy.LastName} ({question.AskedBy.Email})" : "Anonymous")
+                                </small>
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+            <form asp-action="ContactUs" method="post">
+                <div class="form-group">
+                    <label for="questionText" class="form-label">Your Question</label>
+                    <textarea id="questionText" name="questionText" class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Submit Question</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

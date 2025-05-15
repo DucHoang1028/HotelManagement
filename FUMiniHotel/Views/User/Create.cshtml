@@ -1,0 +1,86 @@
+﻿@model FUMiniHotel.DAO.ViewModel.UserViewModel
+
+@{
+    ViewData["Title"] = "Create New User";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2>Create New User</h2>
+            <form asp-action="Create" method="post" id="createUserForm" autocomplete="off">
+                <!-- Validation Summary -->
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <input type="hidden" asp-for="Id" id="userId" />
+
+                <!-- First Name and Last Name -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="FirstName" class="form-label">First Name</label>
+                        <input type="text" asp-for="FirstName" class="form-control" placeholder="Enter first name" required autocomplete="off">
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="LastName" class="form-label">Last Name</label>
+                        <input type="text" asp-for="LastName" class="form-control" placeholder="Enter last name" required autocomplete="off">
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Email and Phone Number -->
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input type="email" asp-for="Email" class="form-control" placeholder="Enter email" required autocomplete="new-email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                        <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Enter phone number" required autocomplete="off">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Password and Role -->
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label asp-for="Password" class="form-label">Password</label>
+                        <input type="password" asp-for="Password" class="form-control" placeholder="Enter password" required autocomplete="new-password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="SelectedRole" class="form-label">Role</label>
+                        <select asp-for="SelectedRole" class="form-select" asp-items="@ViewBag.Roles" required>
+                            <option value="">Select Role</option>
+                        </select>
+                        <span asp-validation-for="SelectedRole" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="@Url.Action("Manage", "User")" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-success">Create User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Success and Error Messages -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div id="successMessage" class="alert alert-success mt-3">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

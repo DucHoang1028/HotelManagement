@@ -1,0 +1,73 @@
+﻿@model FUMiniHotel.Models.QnAViewModel
+
+@{
+    ViewData["Title"] = "Q&A";
+}
+
+<div class="container mt-4">
+    <h2>Q&A</h2>
+
+    <!-- Guest Questions Section -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4>For Guests</h4>
+            <p class="text-muted">Common questions for hotel guests.</p>
+            <div class="accordion" id="guestAccordion">
+                @for (int i = 0; i < Model.GuestQuestions.Count; i++)
+                {
+                    var question = Model.GuestQuestions[i];
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="guest-heading-@i">
+                            <button class="accordion-button @(i == 0 ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#guest-collapse-@i" aria-expanded="@(i == 0 ? "true" : "false")" aria-controls="guest-collapse-@i">
+                                @question.QuestionText
+                            </button>
+                        </h2>
+                        <div id="guest-collapse-@i" class="accordion-collapse collapse @(i == 0 ? "show" : "")" aria-labelledby="guest-heading-@i" data-bs-parent="#guestAccordion">
+                            <div class="accordion-body">
+                                @question.AnswerText
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            @if (!Model.GuestQuestions.Any())
+            {
+                <p class="text-muted mt-3">No featured questions for guests yet.</p>
+            }
+        </div>
+    </div>
+
+    <!-- Hotel Owner Questions Section -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h4>For Hotel Owners</h4>
+            <p class="text-muted">Common questions for hotel owners.</p>
+            <div class="accordion" id="ownerAccordion">
+                @for (int i = 0; i < Model.HotelOwnerQuestions.Count; i++)
+                {
+                    var question = Model.HotelOwnerQuestions[i];
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="owner-heading-@i">
+                            <button class="accordion-button @(i == 0 ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#owner-collapse-@i" aria-expanded="@(i == 0 ? "true" : "false")" aria-controls="owner-collapse-@i">
+                                @question.QuestionText
+                            </button>
+                        </h2>
+                        <div id="owner-collapse-@i" class="accordion-collapse collapse @(i == 0 ? "show" : "")" aria-labelledby="owner-heading-@i" data-bs-parent="#ownerAccordion">
+                            <div class="accordion-body">
+                                @question.AnswerText
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            @if (!Model.HotelOwnerQuestions.Any())
+            {
+                <p class="text-muted mt-3">No featured questions for hotel owners yet.</p>
+            }
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="ContactUs" class="btn btn-primary">Ask a Question</a>
+    </div>
+</div>

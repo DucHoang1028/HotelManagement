@@ -1,0 +1,78 @@
+﻿@model FUMiniHotel.DAO.ViewModel.BookingDetailViewModel
+
+<div class="container my-5 p-4 bg-white shadow-sm rounded">
+    <h2>Booking Details</h2>
+
+    <table class="table">
+        <tr>
+            <th>Booking ID</th>
+            <td>@Model.BookingReservationID</td>
+        </tr>
+        <tr>
+            <th>Customer Name</th>
+            <td>@Model.CustomerName</td>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <td>@Model.PhoneNumber</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <th>Booking Date</th>
+            <td>@Model.BookingDate?.ToString("yyyy-MM-dd")</td>
+        </tr>
+        <tr>
+            <th>Total Price</th>
+            <td>$@Model.TotalPrice</td>
+        </tr>
+        <tr>
+            <th>Booking Status</th>
+            <td>
+                @if (Model.BookingStatus == 0)
+                {
+                    <span class="badge bg-warning">Pending</span>
+                }
+                else
+                {
+                    <span class="badge bg-success">Confirmed</span>
+                }
+            </td>
+        </tr>
+    </table>
+
+    <h3>Booking Details</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Room Picture</th>
+                <th>Room Headline</th>
+                <th>Room Number</th>
+                <th>Room Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var detail in Model.BookingDetails)
+            {
+                <tr>
+                    <td>
+                        <img class="img-fluid me-3" src="/Images/@detail.Room?.RoomPicture" alt="Room Image" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                    </td>
+                    <td>@detail.Room?.RoomHeadline</td>
+                    <td>@detail.RoomNumber</td>
+                    <td>@detail.Room?.RoomType?.RoomTypeName</td>
+                    <td>@detail.StartDate?.ToString("yyyy-MM-dd")</td>
+                    <td>@detail.EndDate?.ToString("yyyy-MM-dd")</td>
+                    <td>$@detail.ActualPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="@Url.Action("Manage", "Booking")" class="btn btn-primary">Back to Manage</a>
+</div>

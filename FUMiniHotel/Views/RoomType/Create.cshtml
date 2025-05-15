@@ -1,0 +1,56 @@
+﻿@model FUMiniHotel.DAO.RoomType
+
+<!-- Button to trigger modal -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#createModal">
+    Create New Room
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createModalLabel">Create New Room</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Create" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="RoomNumber" class="form-label">Room Type Name</label>
+                            <input type="text" id="RoomTypeName" class="form-control" asp-for="RoomTypeName" placeholder="Enter Room Type Name" required>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="TypeNote" class="form-label">Type Note</label>
+                                <input type="text" id="TypeNote" class="form-control" asp-for="TypeNote" placeholder="Enter Type Note" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="TypeDescription" class="form-label">Type Description</label>
+                                <input type="text" id="TypeDescription" class="form-control" asp-for="TypeDescription" placeholder="Enter Type Description" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Status</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="RoomTypeStatus" value="true" id="Active" checked>
+                                    <label class="form-check-label" for="Active">Active</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" asp-for="RoomTypeStatus" value="false" id="InActive">
+                                    <label class="form-check-label" for="InActive">Inactive</label>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="modal-footer mt-3">
+                        <button type="submit" class="btn btn-success">Create Room</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

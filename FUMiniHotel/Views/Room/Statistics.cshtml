@@ -1,0 +1,46 @@
+﻿@model FUMiniHotel.DAO.ViewModel.StatisticsViewModel    
+@{
+    ViewData["Title"] = "Hotel Statistics";
+}
+
+<div class="container mt-4">
+    <h2>Hotel Statistics</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Rooms</h5>
+                            <p class="card-text display-4">@Model.TotalRooms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Occupied Rooms</h5>
+                            <p class="card-text display-4">@Model.OccupiedRooms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Occupancy Rate</h5>
+                            <p class="card-text display-4">@Model.OccupancyRate%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Revenue</h5>
+                            <p class="card-text display-4">$@Model.TotalRevenue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

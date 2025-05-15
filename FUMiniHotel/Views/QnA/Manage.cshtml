@@ -1,0 +1,71 @@
+﻿@model List<FUMiniHotel.Models.Question>
+@using FUMiniHotel.Models
+
+@{
+    ViewData["Title"] = "Manage Q&A";
+}
+
+<div class="container mt-4">
+    <h2>Manage Q&A</h2>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                        <th>Asked By</th>
+                        <th>Asked On</th>
+                        <th>Answered On</th>
+                        <th>Featured</th>
+                        <th>Audience</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var question in Model)
+                    {
+                        <tr>
+                            <td>@question.QuestionText</td>
+                            <td>@(question.IsAnswered ? question.AnswerText : "Not answered")</td>
+                            <td>
+                                @(question.AskedBy != null ? $"{question.AskedBy.FirstName} {question.AskedBy.LastName} ({question.AskedBy.Email})" : "Anonymous")
+                            </td>
+                            <td>@question.AskedDate.ToShortDateString()</td>
+                            <td>@(question.AnsweredDate?.ToShortDateString() ?? "N/A")</td>
+                            <td>@(question.IsFeatured ? "Yes" : "No")</td>
+                            <td>@question.Audience</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    @if (!question.IsAnswered)
+                                    {
+                                        <a asp-action="Answer" asp-route-id="@question.Id" class="btn btn-sm btn-success">Answer</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-action="EditAnswer" asp-route-id="@question.Id" class="btn btn-sm btn-info">Edit</a>
+                                        <form asp-action="ToggleFeatured" method="post" style="display:inline-block;">
+                                            <input type="hidden" name="id" value="@question.Id" />
+                                            <select name="audience" class="form-select form-select-sm d-inline-block w-auto">
+                                                <option value="@Audience.Guest" selected="@(question.Audience == Audience.Guest)">Guest</option>
+                                                <option value="@Audience.HotelOwner" selected="@(question.Audience == Audience.HotelOwner)">Hotel Owner</option>
+                                                <option value="@Audience.Both" selected="@(question.Audience == Audience.Both)">Both</option>
+                                            </select>
+                                            <button type="submit" class="btn btn-sm @(question.IsFeatured ? "btn-warning" : "btn-secondary")">
+                                                @(question.IsFeatured ? "Unfeature" : "Feature")
+                                            </button>
+                                        </form>
+                                    }
+                                    <form asp-action="Delete" method="post" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete this question?');">
+                                        <input type="hidden" name="id" value="@question.Id" />
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
